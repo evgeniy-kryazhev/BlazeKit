@@ -1,8 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazeKit", "BlazeKit\BlazeKit.csproj", "{A9D33521-9BE4-4F38-BC5D-F12D2B2390DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazeKit.Demo", "BlazeKit.Demo\BlazeKit.Demo.csproj", "{ED127ADA-D7DD-4046-88B0-2C0ECB37C9A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9D33521-9BE4-4F38-BC5D-F12D2B2390DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9D33521-9BE4-4F38-BC5D-F12D2B2390DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9D33521-9BE4-4F38-BC5D-F12D2B2390DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9D33521-9BE4-4F38-BC5D-F12D2B2390DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED127ADA-D7DD-4046-88B0-2C0ECB37C9A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED127ADA-D7DD-4046-88B0-2C0ECB37C9A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED127ADA-D7DD-4046-88B0-2C0ECB37C9A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED127ADA-D7DD-4046-88B0-2C0ECB37C9A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,20 @@
+﻿@using BlazeKit.Enums
+
+<div class=@Classes>
+    @ChildContent  
+</div>
+
+@code {
+    
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+    [Parameter]
+    public Justify? Justify { get; set; }
+    [Parameter]
+    public FlexDirection? Direction { get; set; }
+
+    private string GetJustify => Justify.HasValue ? Justify.Value.GetClassName() : string.Empty;
+    private string GetDirection => Direction.HasValue ? Direction.Value.GetClassName() : string.Empty;
+    
+    private string Classes => $"is-flex is-fullwidth {GetDirection} {GetJustify}";
+}

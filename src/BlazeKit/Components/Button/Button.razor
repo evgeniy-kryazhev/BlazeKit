@@ -1,0 +1,24 @@
+﻿@using BlazeKit.Enums
+<button class="button @_type" @onclick="Click">
+    @ChildContent
+</button>
+
+@code {
+    
+    [Parameter]
+    public ButtonType? Type { get; set; }
+    
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    [Parameter]
+    public EventCallback<MouseEventArgs> Click { get; set; }
+    
+    private string _type => Type.HasValue ? Type.Value.GetClassName() : string.Empty;
+    
+    private void Callback(MouseEventArgs obj)
+    {
+        Click.InvokeAsync(obj);
+    }
+
+}

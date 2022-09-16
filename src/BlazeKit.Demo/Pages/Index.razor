@@ -1,16 +1,15 @@
 ﻿@page "/"
+@using BlazeKit.Enums
 
 <PageTitle>Index</PageTitle>
 
 <h1>Hello, world!</h1>
 
 Welcome to your new app.
-<button class="button is-primary" @onclick="args => VisibleModal = true">
-    <span>Modal</span>
-</button>
+<Button Type="ButtonType.Info" Click="() => VisibleModal = true">Show</Button>
 <SurveyPrompt Title="How is Blazor working for you?"/>
 
-<Modal BackgroundContentColor="white" 
+<Modal BackgroundContentColor="white"
        Title="Hello world"
        @bind-IsVisible="VisibleModal">
     <ModalContent>

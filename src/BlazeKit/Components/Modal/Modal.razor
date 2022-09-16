@@ -1,4 +1,5 @@
-﻿@if (IsVisible)
+﻿@using BlazeKit.Components.Button
+@if (IsVisible)
 {
     <div class="k-modal">
         <div class="box" style="background-color: @BackgroundContentColor">
@@ -12,7 +13,9 @@
                     {
                         @Header
                     }
-                    <button @onclick="() => IsVisible = false" class="button is-danger">x</button>
+                    <div class="buttons">
+                        <button @onclick="() => IsVisible = false" class="button is-danger">x</button>
+                    </div>
                 </div>
             </div>
 
@@ -31,12 +34,8 @@
 
 @code {
 
-    private bool _isVisible = false;
-
     [Parameter]
-    public bool IsVisible
-    {
-        get; set; }
+    public bool IsVisible { get; set; } = false;
     
     [Parameter]
     public EventCallback<bool> IsVisibleChanged { get; set; }  

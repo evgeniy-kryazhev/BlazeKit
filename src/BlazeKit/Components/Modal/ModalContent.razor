@@ -1,0 +1,22 @@
+﻿<hr>
+<div class="block k-modal-content">
+    @ChildContent
+</div>
+<hr>
+
+<style>
+    .k-modal-content{
+        min-height: @MinHeight;
+        min-width: @MinWidth;
+    }
+</style>
+
+@code {
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    [Parameter]
+    public string MinHeight { get; set; } = "300px";
+    [Parameter]
+    public string MinWidth { get; set; } = "600px";
+}

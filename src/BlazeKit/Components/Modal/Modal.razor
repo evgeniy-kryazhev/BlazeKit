@@ -1,0 +1,62 @@
+﻿@if (IsVisible)
+{
+    <div class="k-modal">
+        <div class="box" style="background-color: @BackgroundContentColor">
+            <div>
+                <div class="is-flex justify-content-between align-items-center">
+                    @if (Title != null)
+                    {
+                        <h1 class="my-auto title">@Title</h1>
+                    }
+                    else
+                    {
+                        @Header
+                    }
+                    <button @onclick="() => IsVisible = false" class="button is-danger">x</button>
+                </div>
+            </div>
+
+            @if (Content != null)
+            {
+                @Content
+            }
+            else
+            {
+                @ChildContent
+            }
+            @Footer
+        </div>
+    </div>
+}
+
+@code {
+
+    private bool _isVisible = false;
+
+    [Parameter]
+    public bool IsVisible
+    {
+        get; set; }
+    
+    [Parameter]
+    public EventCallback<bool> IsVisibleChanged { get; set; }  
+
+    [Parameter]
+    public RenderFragment<ModalHeader>? Header { get; set; }
+
+    [Parameter]
+    public RenderFragment<ModalFooter>? Footer { get; set; }
+
+    [Parameter]
+    public RenderFragment<ModalContent>? Content { get; set; }
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    [Parameter]
+    public string? Title { get; set; }
+
+    [Parameter]
+    public string? BackgroundContentColor { get; set; }
+
+}
